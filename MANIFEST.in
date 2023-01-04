@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include fns_approval_system *.css
+recursive-include fns_approval_system *.csv
+recursive-include fns_approval_system *.html
+recursive-include fns_approval_system *.ico
+recursive-include fns_approval_system *.js
+recursive-include fns_approval_system *.json
+recursive-include fns_approval_system *.md
+recursive-include fns_approval_system *.png
+recursive-include fns_approval_system *.py
+recursive-include fns_approval_system *.svg
+recursive-include fns_approval_system *.txt
+recursive-exclude fns_approval_system *.pyc
