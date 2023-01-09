@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-12-21 03:57:57.968124",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "supplier",
+  "frt_code",
+  "invoice_no",
+  "slip_no",
+  "column_break_5",
+  "currency",
+  "amount",
+  "hbl",
+  "cntr",
+  "remark"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fetch_from": "slip_no.supplier",
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Supplier",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "frt_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "FRT Code",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "slip_no.bill_no",
+   "fieldname": "invoice_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Invoice No",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "slip_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Slip No",
+   "options": "Purchase Invoice",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "slip_no.outstanding_amount",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "columns": 1,
+   "fieldname": "hbl",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "HBL"
+  },
+  {
+   "columns": 1,
+   "fieldname": "cntr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CNTR"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "slip_no.remarks",
+   "fieldname": "remark",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Remark"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-08 16:57:49.608457",
+ "modified_by": "Administrator",
+ "module": "Fns Approval System",
+ "name": "Late Payment Request Details",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "LTPAY-.YY.MM.#####",
+ "creation": "2022-12-21 03:40:39.237852",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rfd_approval_line",
+  "section_break_2",
+  "title",
+  "section_break_4",
+  "company",
+  "draft_dept",
+  "column_break_9",
+  "draft_employee",
+  "draft_date",
+  "column_break_12",
+  "currency",
+  "amount",
+  "section_break_10",
+  "reason",
+  "details_section",
+  "late_payment_request_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "rfd_approval_line",
+   "fieldtype": "Table",
+   "label": "RFD Approval Line",
+   "options": "RFD Approval Line Accounting"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "draft_employee.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "draft_employee.department",
+   "fieldname": "draft_dept",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Draft Dept",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "draft_employee",
+   "fieldtype": "Link",
+   "label": "Draft Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "draft_date",
+   "fieldtype": "Date",
+   "label": "Draft Date"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Request Reason"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Text Editor",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "late_payment_request_details",
+   "fieldtype": "Table",
+   "label": "Late Payment Request Details",
+   "options": "Late Payment Request Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Late Payment Request",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-01-08 16:58:02.956439",
+ "modified_by": "Administrator",
+ "module": "Fns Approval System",
+ "name": "Late Payment Request",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
