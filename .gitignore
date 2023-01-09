@@ -1,4 +1,5 @@
 .DS_Store
+fns_approval_system.egg-info
 *.pyc
 *.egg-info
 *.swp
