@@ -238,6 +238,6 @@ frappe.ui.form.on('RFD Approval Line',{
 	// }
 	employee(frm,cdt,cdn){
 		var d = locals[cdt][cdn]
-		frappe.msgprint(d.employee)
+		// frappe.msgprint(d.employee)
 	}
 });
