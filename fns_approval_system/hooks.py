@@ -190,3 +190,29 @@ app_license = "MIT"
 # auth_hooks = [
 #	"fns_approval_system.auth.validate"
 # ]
+fixtures=[
+    "Workflow State","Workflow Action Master",
+	{"dt":"Print Format","filters":[
+        [
+            "name","in",[
+                "Report For Decision"
+            ]
+        ]
+    ]},
+	{"dt": "Client Script", "filters": [
+        [
+            "name", "in", [
+                "Get FNS Employee Fom",
+                "Get FNS Employee",
+				"Get Ipadress"
+            ]
+        ]
+    ]},
+    {"dt":"Workflow","filters": [
+        [
+            "name","in",[
+                "RFD"
+            ]
+        ]
+    ]}
+]

@@ -7,10 +7,9 @@ frappe.ui.form.on('Report For Decision', {
         cur_frm.fields_dict['approval_line'].grid.get_field('employee').get_query = function(doc, cdt, cdn) {
 			var d = locals[cdt][cdn]
 			return {
-				filters: [
+				filters: [ // user Id가 존재하는 사번만 가져온다.
 					['status','=' ,'Active'],
                     ['user_id' , 'like' ,'%@%']
-
                 ]
 				// filters: [
 				// 	['BOM', 'item', '=', d.item_code],
@@ -33,6 +32,7 @@ frappe.ui.form.on('Report For Decision', {
     if(frm.doc.__islocal)
       frappe.model.clear_table(frm.doc, "approval_line");
 	if(frm.is_new()){
+		frm.set_intro('Now you can create New Report for decision!!')
         frappe.call({
                 "method": "frappe.client.get_value",
                 "args": {
@@ -211,7 +211,7 @@ frappe.ui.form.on('Report For Decision', {
                     //msgprint("Can not Approve.");
                     //validated = false;
                     //throw "Not allowed";
-					frappe.throw("Can not Approve")
+					// frappe.throw("Can not Approve")
                 }
                 //frm.toggle_enable("approval_line", false);
             }
@@ -219,7 +219,7 @@ frappe.ui.form.on('Report For Decision', {
                 //msgprint("Can not Approve.");
                 //validated = false;
                 //throw "Not allowed";
-				frappe.throw("Can not Approve")
+				// frappe.throw("Can not Approve")
             }
         }
 
@@ -231,4 +231,13 @@ frappe.ui.form.on('Report For Decision', {
 	}
 
 
+});
+frappe.ui.form.on('RFD Approval Line',{
+	// employee: function(frm){
+	// 	frappe.msgprint("TEST")
+	// }
+	employee(frm,cdt,cdn){
+		var d = locals[cdt][cdn]
+		// frappe.msgprint(d.employee)
+	}
 });
