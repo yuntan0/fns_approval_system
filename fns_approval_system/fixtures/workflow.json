@@ -4,10 +4,10 @@
   "doctype": "Workflow",
   "document_type": "Report For Decision",
   "is_active": 1,
-  "modified": "2022-07-14 06:13:21.199450",
+  "modified": "2023-03-12 20:46:57.708106",
   "name": "RFD",
   "override_status": 0,
-  "send_email_alert": 1,
+  "send_email_alert": 0,
   "states": [
    {
     "allow_edit": "Employee",

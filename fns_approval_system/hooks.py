@@ -199,15 +199,15 @@ fixtures=[
             ]
         ]
     ]},
-	{"dt": "Client Script", "filters": [
-        [
-            "name", "in", [
-                "Get FNS Employee Fom",
-                "Get FNS Employee",
-				"Get Ipadress"
-            ]
-        ]
-    ]},
+	# {"dt": "Client Script", "filters": [
+    #     [
+    #         "name", "in", [
+    #             "Get FNS Employee Fom",
+    #             "Get FNS Employee",
+	# 			"Get Ipadress"
+    #         ]
+    #     ]
+    # ]},
     {"dt":"Workflow","filters": [
         [
             "name","in",[
